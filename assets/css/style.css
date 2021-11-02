@@ -1,0 +1,42 @@
+/* commonGeneralRules */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* /commonGeneralRules */
+
+/* .container */
+.container {
+	width: 600px !important;
+	margin: 2rem auto;
+}
+
+/* .addTasks */
+#input {
+	width: 300px;
+	border-radius: 8px;
+	border: 1px solid black;
+	padding: 0.5rem;
+	margin-right: 1rem;
+}
+
+#buttonAdd {
+	width: 100px;
+	margin-left: 1rem;
+	border-radius: 8px;
+	border: 1px solid black;
+	padding: 0.5rem;
+}
+
+.error {
+	color: red;
+}
+/* /.addTasks */
+
+/* .tasks */
+.item {
+	background-color: #f5f7f7;
+}
+/* /.tasks */
+/* /.container */
