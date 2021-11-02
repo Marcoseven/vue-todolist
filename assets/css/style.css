@@ -35,8 +35,15 @@
 /* /.addTasks */
 
 /* .tasks */
-.item {
+.tasks {
 	background-color: #f5f7f7;
+	border-radius: 20px;
+}
+
+.delete-task:hover {
+	cursor: pointer;
 }
 /* /.tasks */
 /* /.container */
+
+
