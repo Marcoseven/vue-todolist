@@ -11,7 +11,6 @@
 			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 			crossorigin="anonymous"
 		/>
-
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -24,7 +23,7 @@
 	<body>
 		<!-- #app -->
 		<div id="app">
-            <!-- .container -->
+			<!-- .container -->
 			<div class="container">
 				<!-- .logo -->
 				<div class="logo text-center">
@@ -43,35 +42,45 @@
 						enter="addTask"
 					/>
 					<button id="buttonAdd" @click="addTask">Aggiungi</button>
-					<div class="error" v-show="error">Devi scrivere una task</div>
+					<div class="error" v-show="error">
+						Errore! Devi scrivere una task correttamente, che deve avere una
+						lunghezza maggiore di 5 caratteri.
+					</div>
 				</div>
 				<!-- /.addTasks -->
 
 				<!-- .tasks -->
-				<div class="tasks mt-5" v-if="tasks.length > 0">
-					<div
-						class="item d-flex justify-content-between pt-3 pb-3 ps-5 pe-5"
-						v-for="(task, index) in tasks"
-					>
-						{{task}}
+				<div class="tasks mt-5 p-5">
+					<div v-if="tasks.length > 0">
+						<div
+							class="
+								item
+								d-flex
+								justify-content-between
+								p-3
+								border-bottom
+								fs-5
+								fw-normal
+							"
+							v-for="(task, index) in tasks"
+						>
+							{{task}}
 
-						<div class="delete-task">
-							<i
-								class="fa fa-times-circle fa-lg fa-fw"
-								@click="removeTask(index)"
-							></i>
+							<div class="delete-task">
+								<i
+									class="fa fa-times-circle fa-lg fa-fw"
+									@click="removeTask(index)"
+								></i>
+							</div>
 						</div>
-						</div>
+					</div>
+					<div v-else>
+						<h6>Lista vuota</h6>
 					</div>
 				</div>
 				<!-- /.tasks -->
-
-				<div v-else>
-					<p>Nothing to do! Enjoy you day.</p>
-				</div>
 			</div>
-            <!-- /.container -->
-
+			<!-- /.container -->
 		</div>
 		<!-- /#app -->
 
